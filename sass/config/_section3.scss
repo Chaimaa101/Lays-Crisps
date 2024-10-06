@@ -1,0 +1,62 @@
+@use "./root" as *;
+
+.section3 {
+  .h2 {
+    margin: 0;
+    padding-bottom: 5.2rem;
+  }
+  .root {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 4rem;
+    @include md() {
+      flex-direction: column-reverse;
+    }
+    .section3-left {
+      width: 48%;
+      @include md() {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        .img {
+          background-color: #ffeaec;
+        }
+      }
+      .img {
+        position: relative;
+        background-color: #e3fff3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        .background {
+          width: 100%;
+        }
+        .cheaps {
+          position: absolute;
+          width: 50%;
+          top: -4rem;
+          @include md() {
+            top: -2rem;
+          }
+        }
+      }
+      .text-grid-column {
+        margin-top: 15px;
+        .h3-Semi {
+          margin-block: 10px;
+        }
+        .p-normal {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .play {
+            font-size: 25px;
+            color: $black-color;
+          }
+        }
+      }
+    }
+  }
+}

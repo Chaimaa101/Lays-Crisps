@@ -1,0 +1,113 @@
+@use "./root" as *;
+
+.section2 {
+  .h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .p1 {
+    text-align: center;
+    color: #5D696D;
+  }
+  .grid {
+      margin-top: 8rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include lg() {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include sm() {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      column-gap: 2.5rem;
+      row-gap: 6rem;
+        @include sm() {
+          row-gap: 3rem;
+        }
+    .grid-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+      &:nth-child(2) {
+        .img {
+          background-color: #FFE3E4;
+        }
+      }
+      &:nth-child(3) {
+        .img {
+          background-color: #FFFBD6;
+        }
+      }
+      &:nth-child(4) {
+        .img {
+          background-color: #FFEFE3;
+        }
+      }
+      &:nth-child(5) {
+        .img {
+          background-color: #DDF6FF;
+        }
+      }
+      &:nth-child(6) {
+        .img {
+          background-color: #F8FFE3;
+        }
+      }
+      .img {
+        position: relative;
+        background-color: #E3FFF3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        .background {
+          width: 100%;
+        }
+        .cheaps {
+          position: absolute;
+          top: -4rem;
+          @include sm() {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .plus {
+          position: absolute;
+          background: black;
+          font-size: 30px;
+          color: white;
+          padding: 10px;
+          border-radius: 50%;
+          bottom: -25px;
+          right: 3.2rem;
+          cursor: pointer;
+          transition: 0.3s all linear;
+          &:hover {
+            transform: scale(0.95,0.95);
+          }
+        }
+      }
+      .text-grid-column {
+        .price {
+          margin-bottom: 1rem;
+        }
+        .p-normal {
+          margin-bottom: 1rem;
+        }
+        .stars {
+          color: #FBB616;
+          i {
+            margin-right: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .botton1 {
+    margin-inline: auto;
+    display: block;
+    margin-top: 2rem;
+  }
+} 
